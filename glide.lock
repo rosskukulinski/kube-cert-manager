@@ -1,5 +1,5 @@
-hash: 4716b0486c4c56cebc177f7f908b22daa9e20addd72cfadc7a999a97ca12ae78
-updated: 2017-01-18T15:02:19.65481834-05:00
+hash: ac7102407876c0d509b17e51e9715532cfdfea521e39b654e7635dd3011a447c
+updated: 2017-03-23T14:40:15.286104744-04:00
 imports:
 - name: cloud.google.com/go
   version: 3b1ae45394a234c385be014e9a488f2bb6eef821
@@ -17,23 +17,19 @@ imports:
   - aws/corehandlers
   - aws/credentials
   - aws/credentials/ec2rolecreds
-  - aws/credentials/endpointcreds
-  - aws/credentials/stscreds
   - aws/defaults
   - aws/ec2metadata
-  - aws/endpoints
   - aws/request
   - aws/session
-  - aws/signer/v4
+  - private/endpoints
   - private/protocol
   - private/protocol/query
   - private/protocol/query/queryutil
   - private/protocol/rest
   - private/protocol/restxml
   - private/protocol/xml/xmlutil
-  - private/waiter
+  - private/signer/v4
   - service/route53
-  - service/sts
 - name: github.com/boltdb/bolt
   version: a705895fdad108f053eae7ee011ed94a0541ee13
 - name: github.com/davecgh/go-spew
@@ -95,6 +91,24 @@ imports:
   version: d2207178e10e4527e8f222fd8707982df8c3af17
   subpackages:
   - ovh
+- name: github.com/owais/lego
+  version: 2601ebae8e31a881195ec15bcc75bb97af46abfc
+  subpackages:
+  - acme
+  - providers/dns/cloudflare
+  - providers/dns/digitalocean
+  - providers/dns/dnsimple
+  - providers/dns/dnsmadeeasy
+  - providers/dns/dyn
+  - providers/dns/gandi
+  - providers/dns/googlecloud
+  - providers/dns/linode
+  - providers/dns/namecheap
+  - providers/dns/ovh
+  - providers/dns/pdns
+  - providers/dns/rfc2136
+  - providers/dns/route53
+  - providers/dns/vultr
 - name: github.com/pborman/uuid
   version: ca53cad383cad2479bbba7f7a1a05797ec1386e4
 - name: github.com/pkg/errors

@@ -2,7 +2,7 @@ package: stable.k8s.psg.io
 import:
 - package: github.com/boltdb/bolt
 - package: github.com/pkg/errors
-- package: github.com/xenolf/lego
+- package: github.com/owais/lego
   subpackages:
   - acme
   - providers/dns/cloudflare

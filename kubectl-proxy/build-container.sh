@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-docker build -t palmstonegames/kubectl-proxy:1.4.0 -t palmstonegames/kubectl-proxy:latest $(dirname "$0")
-docker push palmstonegames/kubectl-proxy:1.4.0
-docker push palmstonegames/kubectl-proxy:latest
+docker build -t rosskukulinski/kubectl-proxy:1.5.4 -t rosskukulinski/kubectl-proxy:latest $(dirname "$0")
+docker push rosskukulinski/kubectl-proxy:1.5.4
+docker push rosskukulinski/kubectl-proxy:latest
