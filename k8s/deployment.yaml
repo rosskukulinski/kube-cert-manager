@@ -14,10 +14,11 @@ spec:
     spec:
       containers:
         - name: kube-cert-manager
-          image: palmstonegames/kube-cert-manager:0.5.0
+          image: rosskukulinski/kube-cert-manager:0.5.0-san
           args:
+            - "-class="
             - "-data-dir=/var/lib/cert-manager"
-            - "-acme-url=https://acme-staging.api.letsencrypt.org/directory"
+            - "-acme-url=https://acme-v01.api.letsencrypt.org/directory"
             # NOTE: the URL above points to the staging server, where you won't get real certs.
             # Uncomment the line below to use the production LetsEncrypt server:
             #- "-acme-url=https://acme-v01.api.letsencrypt.org/directory"
@@ -34,7 +35,7 @@ spec:
             - name: data
               mountPath: /var/lib/cert-manager
         - name: kubectl-proxy
-          image: palmstonegames/kubectl-proxy:1.4.0
+          image: rosskukulinski/kubectl-proxy:1.5.4
       volumes:
         - name: "data"
           gcePersistentDisk:
